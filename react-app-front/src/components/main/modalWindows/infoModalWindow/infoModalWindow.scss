@@ -80,9 +80,6 @@
 .task-description {
   margin-top: 20px;
   max-height: 450px;
-  overflow-y: auto;
-  word-wrap: break-word;
-  hyphens: auto;
 }
 
 .task-description h2 {
@@ -94,6 +91,9 @@
 .task-description p {
   color: var(--primary-color);
   font-size: 18px;
+  overflow-y: auto;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 .task-field {
@@ -143,9 +143,26 @@
     flex-direction: column;
   }
 
+  .edit-button__model {
+    margin: 0;
+  }
+
+  .history-action {
+    max-width: 260px;
+  }
+
+  .history-info__model-container {
+    min-width: 360px;
+  }
+
   .history-items {
     overflow-y: auto;
     height: 220px;
+    width: 300px;
+  }
+
+  .task-description p {
+    max-height: 70px;
   }
 }
 
@@ -153,11 +170,5 @@
   .info-main__container {
     @include flex(flex, center, unset);
     flex-direction: column;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .history-items {
-    width: 400px;
   }
 }
