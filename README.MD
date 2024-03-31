@@ -22,7 +22,7 @@ npx prisma migrate dev
 npm run start:dev
 ```
 
-# FRON
+# FRONT
 
 ## Installing dependencies
 
