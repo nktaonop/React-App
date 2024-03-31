@@ -95,7 +95,7 @@ export default function ModalWindow({
                   placeholder="Due date"
                   type="date"
                   autoComplete="off"
-                  {...register('dueDate')}
+                  {...register('dueDate', { required: true })}
                 />
                 <input
                   placeholder="Description"

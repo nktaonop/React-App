@@ -41,6 +41,11 @@ export default function InfoModalWindow({ task, onClose }: ModalProps) {
     return dayjs(isoDate).locale('en').format('ddd, MMM D')
   }
 
+  const onCloseEditModal = () => {
+    setShowEditModal(false)
+    fetchTaskHistory()
+  }
+
   const editRedirect = () => {
     setShowEditModal(!showEditModal)
   }
@@ -94,7 +99,7 @@ export default function InfoModalWindow({ task, onClose }: ModalProps) {
                 task={task}
                 taskListId={task.id}
                 isNewTask={false}
-                onClose={() => setShowEditModal(false)}
+                onClose={onCloseEditModal}
               />
             )}
 
