@@ -1,0 +1,124 @@
+@import '../../styles/mixins';
+
+.header__container {
+  height: 50px;
+  @include flex(flex, center, space-between);
+}
+
+.buttons__container {
+  @include flex(flex, center, unset);
+}
+
+.started-buttons {
+  display: flex;
+}
+
+.title {
+  color: var(--primary-text-color);
+}
+
+.history-button {
+  cursor: pointer;
+  font-size: 16px;
+  padding-bottom: 4px;
+  margin-left: 10px;
+  color: var(--primary-text-color);
+  background: var(--white-color);
+  @include size(120px, 40px);
+  @include flex(flex, center, center);
+  @include border(--primary-border-color, 5px);
+}
+
+.history-button:hover {
+  background: var(--secondary-hover-color);
+  transition: all 0.4s ease;
+}
+
+.new-list {
+  font-size: 16px;
+  color: var(--white-color);
+  background: var(--primary-color);
+  padding-bottom: 4px;
+  cursor: pointer;
+  @include flex(flex, center, center);
+  @include size(160px, 40px);
+  @include border(--primary-color, 5px);
+}
+
+.new-list:hover {
+  background: var(--primary-hover-color);
+  transition: all 0.4s ease;
+}
+
+.reload-icon {
+  margin-right: 5px;
+  @include size(20px, 20px);
+}
+
+.plus-icon {
+  margin-right: 5px;
+  @include size(18px, 18px);
+}
+
+.input__container {
+  width: 290px;
+  flex-direction: column;
+  margin-top: 50px;
+  z-index: 110;
+  @include flex(flex, unset, right);
+}
+
+.create-input {
+  width: 100%;
+  padding-left: 20px;
+  height: 34px;
+  outline: none;
+  font-size: 16px;
+  box-sizing: border-box;
+  @include border(--primary-border-color, 5px);
+}
+
+.create-list__container {
+  margin-top: 10px;
+  display: flex;
+}
+
+.create-button {
+  color: var(--white-color);
+  background: var(--primary-color);
+  font-size: 16px;
+  margin-right: 10px;
+  @include size(60%, 40px);
+  @include border(--primary-border-color, 5px);
+}
+
+.cancel-button {
+  color: var(--primary-text-color);
+  background: var(--white-color);
+  font-size: 16px;
+  @include size(140px, 40px);
+  @include border(--primary-border-color, 5px);
+}
+
+.create-button:hover {
+  background: var(--primary-hover-color);
+  transition: all 0.2s ease;
+}
+
+.cancel-button:hover {
+  background: var(--secondary-hover-color);
+  transition: all 0.2s ease;
+}
+
+@media screen and (max-width: 500px) {
+  .title {
+    margin-bottom: 10px;
+  }
+  .header__container {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  .buttons__container {
+    height: 40px;
+  }
+}

@@ -1,0 +1,57 @@
+:root {
+  --white-color: #fff;
+  --primary-text-color: #000;
+  --primary-color: #5d6481;
+  --primary-hover-color: #737ca1;
+  --secondary-hover-color: #e1e5ec;
+  --primary-border-color: #a2a7b3;
+  --primary-description-color: #a2a7b3;
+  --primary-bg: #e9ecf0;
+}
+
+@font-face {
+  font-family: 'AvertaDemoPE';
+  src: url('./fonts/AvertaDemoPE-Regular.woff2') format('woff2');
+}
+
+* {
+  font-family: 'AvertaDemoPE';
+  box-sizing: border-box;
+}
+
+[data-theme='dark'] {
+  --white-color: #0b1322;
+  --primary-text-color: #fff;
+  --primary-bg: #383333;
+  --secondary-hover-color: #636669;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.App {
+  height: inherit;
+  background: var(--white-color);
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa2a2;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 15px;
+}

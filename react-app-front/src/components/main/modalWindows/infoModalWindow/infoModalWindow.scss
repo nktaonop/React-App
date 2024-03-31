@@ -1,0 +1,145 @@
+@import '../../../../styles/mixins';
+
+.modal__container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 130;
+  background-color: rgba(0, 0, 0, 0.5);
+  @include flex(flex, center, center);
+}
+
+.modal-window {
+  border-radius: 13px;
+  background-color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  @include size(1024px, 720px);
+}
+
+.modal-header {
+  height: 60px;
+  background: var(--primary-color);
+  @include flex(flex, center, end);
+}
+
+.close-button {
+  border: 0;
+  margin-right: 20px;
+  background: inherit;
+  cursor: pointer;
+}
+
+.info-modal__container {
+  @include flex(flex, flex-start, space-between);
+}
+
+.info__container {
+  width: 300px;
+}
+
+.info__container,
+.edit-button__model,
+.history-title {
+  margin: 30px;
+}
+
+.task-name {
+  font-weight: 800;
+  font-size: 32px;
+  margin-bottom: 20px;
+  overflow-y: auto;
+  color: var(--primary-text-color);
+}
+
+.task-dueDate {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: var(--primary-text-color);
+  @include flex(flex, center, space-between);
+}
+
+.task-dueDate span,
+.task-priority span,
+.task-priority p {
+  color: var(--primary-color);
+}
+
+.task-dueDate svg,
+.task-priority svg {
+  margin-right: 35px;
+}
+
+.task-priority {
+  font-size: 18px;
+  @include flex(flex, center, space-between);
+}
+
+.task-description {
+  margin-top: 20px;
+  max-height: 450px;
+  overflow-y: auto;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+.task-description h2 {
+  font-size: 20px;
+  color: var(--primary-text-color);
+  margin-bottom: 10px;
+}
+
+.task-description p {
+  color: var(--primary-color);
+  font-size: 18px;
+}
+
+.task-field {
+  color: var(--primary-text-color);
+}
+
+.edit-button__model {
+  border: 0;
+  background-color: inherit;
+  font-size: 16px;
+  margin-top: 35px;
+  cursor: pointer;
+  color: var(--primary-text-color);
+  @include flex(flex, center, center);
+}
+
+.edit-button__model svg {
+  margin-right: 4px;
+}
+
+.history {
+  overflow-y: auto;
+}
+
+.history-info__container {
+  width: 400px;
+  flex-direction: column;
+  @include flex(flex, unset, flex-start);
+}
+
+.history-title {
+  color: var(--primary-text-color);
+}
+
+.history-info__model-container {
+  width: 450px;
+}
+
+.history-items {
+  overflow-y: auto;
+  height: 550px;
+}
+
+@media screen and (max-width: 600px) {
+  .info-main__container {
+    @include flex(flex, center, unset);
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,88 @@
+@import '../../../../styles/mixins';
+
+.modal__container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 130;
+  background-color: rgba(0, 0, 0, 0.5);
+  @include flex(flex, center, center);
+}
+
+.modal-window {
+  border-radius: 13px;
+  background-color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  @include size(1024px, 720px);
+}
+
+.modal-header {
+  height: 60px;
+  background: var(--primary-color);
+  @include flex(flex, center, end);
+}
+
+.close-button {
+  border: 0;
+  margin-right: 20px;
+  background: inherit;
+  cursor: pointer;
+}
+
+.main__container {
+  flex-grow: 1;
+  overflow-y: auto;
+  @include flex(flex, unset, space-between);
+}
+
+.cross-icon {
+  color: var(--white-color);
+  @include size(30px, 30px);
+}
+
+.create-task__container {
+  padding: 30px;
+}
+
+.form {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputs__container input,
+select {
+  height: 40px;
+  outline: none;
+  font-size: 16px;
+  padding-left: 9px;
+  margin-bottom: 15px;
+  @include border(--primary-border-color, 5px);
+}
+
+.create-button__modal {
+  color: var(--white-color);
+  background: var(--primary-color);
+  font-size: 16px;
+  @include size(100%, 40px);
+  @include border(--primary-color, 5px);
+}
+
+.create-button__modal:hover {
+  background: var(--primary-hover-color);
+  transition: all 0.2s ease;
+}
+
+.due-date {
+  padding-right: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .main__container {
+    @include flex(flex, center, unset);
+    flex-direction: column;
+  }
+}

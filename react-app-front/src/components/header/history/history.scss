@@ -1,0 +1,121 @@
+@import '../../../styles/mixins';
+
+.history__container {
+  position: absolute;
+  width: 100%;
+  z-index: 140;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.history__wrapper {
+  max-width: 475px;
+  min-height: 100vh;
+  margin-left: auto;
+  background-color: var(--primary-bg);
+}
+
+.history-header {
+  width: 100%;
+  height: 50px;
+  padding: 0 15px 5px 15px;
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  @include flex(flex, center, space-between);
+}
+
+.history-close {
+  border: 0;
+  cursor: pointer;
+  background: inherit;
+}
+
+.history-close svg {
+  margin-top: 5px;
+  color: var(--white-color);
+  @include size(25px, 25px);
+}
+
+.history-list {
+  overflow-y: auto;
+  height: 94vh;
+}
+
+.history {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.history:first-child {
+  margin-top: 20px;
+}
+
+.history__modal {
+  padding: 10px 15px 10px 25px;
+  width: 475px;
+}
+
+.history-data__container {
+  flex-direction: column;
+  @include flex(flex, flex-start, center);
+}
+
+.history-data {
+  b {
+    font-size: 16px;
+    display: inline-block;
+    position: relative;
+    padding-left: 20px;
+    color: var(--primary-text-color);
+    overflow-wrap: break-word;
+
+    &:before {
+      content: '';
+      width: 14px;
+      height: 14px;
+      border: 1px solid var(--primary-text-color);
+      border-radius: 50%;
+      left: 0;
+      top: 50%;
+      transform: translate(0, -50%);
+      position: absolute;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: var(--primary-text-color);
+      left: 8px;
+      top: 50%;
+      transform: translate(-3px, -50%);
+    }
+  }
+}
+
+.history-data:first-child {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--primary-text-color);
+}
+
+.history-data:last-child {
+  font-size: 16px;
+  color: var(--primary-description-color);
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 475px) {
+  .history-header {
+    width: 100%;
+  }
+}
+
+.history__empty-state {
+  margin: 10px 0 0 10px;
+  color: var(--primary-text-color);
+}

@@ -1,0 +1,32 @@
+@import '../../../styles/mixins';
+
+.menu {
+  width: 100px;
+  top: 0;
+  right: -64px;
+  z-index: 100;
+  position: absolute;
+  flex-direction: column;
+  padding: 7px 7px 7px 11px;
+  background-color: var(--white-color);
+  @include flex(flex, start, unset);
+  @include border(--primary-border-color, 5px);
+}
+
+.title-menu__buttons {
+  border: 0;
+  font-size: 15px;
+  cursor: pointer;
+  color: var(--primary-text-color);
+  background-color: var(--white-color);
+  @include flex(flex, center, center);
+}
+
+.title-menu__buttons svg {
+  margin-right: 5px;
+}
+
+.title-menu__buttons:last-child {
+  color: red;
+  margin-top: 4px;
+}
