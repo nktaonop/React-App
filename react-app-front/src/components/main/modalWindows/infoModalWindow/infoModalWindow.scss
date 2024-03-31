@@ -137,9 +137,27 @@
   height: 550px;
 }
 
+@media screen and (max-width: 990px) {
+  .info-modal__container {
+    @include flex(flex, center, unset);
+    flex-direction: column;
+  }
+
+  .history-items {
+    overflow-y: auto;
+    height: 220px;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .info-main__container {
     @include flex(flex, center, unset);
     flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .history-items {
+    width: 400px;
   }
 }
